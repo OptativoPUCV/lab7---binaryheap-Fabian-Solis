@@ -1,0 +1,14 @@
+Fri 12 May 2023 06:09:43 PM UTC: 
+ heap.c | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_top’:
+heap.c:22:19: error: ‘return’ with no value, in function returning non-void [-Werror=return-type]
+   22 |   if(!pq -> size) return;
+      |                   ^~~~~~
+heap.c:20:7: note: declared here
+   20 | void* heap_top(Heap* pq)
+      |       ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+1269447
