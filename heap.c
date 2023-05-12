@@ -21,7 +21,7 @@ void* heap_top(Heap* pq)
 {
   if(!pq -> size) return NULL;
 
-  return pq -> heapArray.data;
+  return pq -> heapArray[].data;
 }
 
 

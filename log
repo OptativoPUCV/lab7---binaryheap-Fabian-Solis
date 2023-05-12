@@ -27,3 +27,17 @@ heap.c:25:1: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 ecb3c35
+Fri 12 May 2023 06:10:35 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_top’:
+heap.c:24:26: error: expected expression before ‘]’ token
+   24 |   return pq -> heapArray[].data;
+      |                          ^
+heap.c:25:1: error: control reaches end of non-void function [-Werror=return-type]
+   25 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+3573840
