@@ -53,7 +53,8 @@ void heap_pop(Heap* pq)
   int hijoMenor = 1, hijoMayor = 2, pos = 0;
   heapElem auxiliar;
   
-
+    pq -> size--;
+  
   
   while (hijoMenor < pq -> size)
   {
