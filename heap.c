@@ -53,8 +53,7 @@ void heap_pop(Heap* pq)
   int hijoMenor = 1, hijoMayor = 2, pos = 0;
   heapElem auxiliar;
   
-  pq -> size--;
-  pq -> heapArray[0] = pq -> heapArray[pq -> size];
+
   
   while (hijoMenor < pq -> size)
   {
@@ -71,7 +70,6 @@ void heap_pop(Heap* pq)
 
     hijoMenor = hijoMenor * 2 + 1;
     hijoMayor = hijoMayor * 2 + 2;
-    
   }
 }
 
