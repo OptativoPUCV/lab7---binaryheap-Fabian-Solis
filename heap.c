@@ -80,7 +80,7 @@ Heap* createHeap()
 
   h -> heapArray = malloc(3 * sizeof(Heap));
   h -> size = 0;
-  
+  h -> capac = 3;
 
   return h;
 }
