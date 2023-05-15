@@ -16,15 +16,12 @@ typedef struct Heap{
   int capac;
 } Heap;
 
-
 void* heap_top(Heap* pq)
 {
   if(!pq -> size) return NULL;
 
   return pq -> heapArray[0].data;
 }
-
-
 
 void heap_push(Heap* pq, void* data, int priority)
 {
@@ -47,11 +44,10 @@ void heap_push(Heap* pq, void* data, int priority)
   pq -> size++;
 }
 
-
 void heap_pop(Heap* pq)
 {
   int hijoMenor = 1, hijoMayor = 2, pos = 0;
-  heapElem auxiliar;
+  heapElem aux;
   
   pq -> size--;
   pq -> heapArray[0] = pq -> heapArray[pq -> size];
@@ -64,9 +60,9 @@ void heap_pop(Heap* pq)
     
     if(pq -> heapArray[pos].priority >= pq -> heapArray[nodoHijo].priority) break;
     
-    auxiliar = pq -> heapArray[pos];
+    aux = pq -> heapArray[pos];
     pq -> heapArray[pos] = pq -> heapArray[nodoHijo];
-    pq -> heapArray[nodoHijo] = auxiliar;
+    pq -> heapArray[nodoHijo] = aux;
     pos = nodoHijo;
 
     hijoMenor = hijoMenor * 2 + 1;
