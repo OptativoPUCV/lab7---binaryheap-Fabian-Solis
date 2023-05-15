@@ -60,9 +60,9 @@ void heap_pop(Heap* pq)
   {
     int nodoHijo = hijoMenor;
     
-    if (hijoMenor < pq -> size && pq -> heapArray[hijoMayor].priority > pq -> heapArray[hijoMenor].priority) nodoHijo = hijoMayor;
     
     
+    if(pq -> heapArray[pos].priority >= pq -> heapArray[nodoHijo].priority) break;
     
     auxiliar = pq -> heapArray[pos];
     pq -> heapArray[pos] = pq -> heapArray[nodoHijo];
