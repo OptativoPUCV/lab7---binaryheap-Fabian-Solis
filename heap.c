@@ -78,9 +78,9 @@ Heap* createHeap()
 {
   Heap *h = malloc(sizeof(Heap));
 
-  h -> heapArray = malloc(sizeof(Heap));
+  h -> heapArray = malloc(3 * sizeof(Heap));
   h -> size = 0;
-  h -> capac = 0;
+  h -> capac = 3;
 
   return NULL;
 }
