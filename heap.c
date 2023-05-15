@@ -76,18 +76,11 @@ void heap_pop(Heap* pq)
 
 Heap* createHeap()
 {
-  
-  
-  Heap *clon = createHeap();
-  clon->size = pq->size;
-  clon->capac = pq->capac;
+  Heap *h = malloc(sizeof(Heap));
 
-  clon->heapArray = (heapElem*) malloc(sizeof(heapElem) * pq->capac);
+  h -> heapArray = malloc(sizeof(Heap));
+  h -> size = 0;
+  h -> capac = 0;
 
-  for (int i = 0; i < pq->size; i++) 
-  {
-    clon->heapArray[i] = pq->heapArray[i];
-  }
-  
   return NULL;
 }

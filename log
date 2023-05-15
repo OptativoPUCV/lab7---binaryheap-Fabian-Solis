@@ -138,3 +138,9 @@ heap.c:82:16: error: ‘pq’ undeclared (first use in this function)
 heap.c:82:16: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 43c101a
+Mon 15 May 2023 12:21:52 AM UTC: 
+ heap.c | 15 ++++-----------
+ 1 file changed, 4 insertions(+), 11 deletions(-)
+ tests:  7|1
+total_score: 60/70
+ab7d9c9
