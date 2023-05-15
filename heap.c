@@ -67,7 +67,7 @@ void heap_pop(Heap* pq)
     auxiliar = pq -> heapArray[pos];
     pq -> heapArray[pos] = pq -> heapArray[nodoHijo];
     pq -> heapArray[nodoHijo] = auxiliar;
-    
+    pos = nodoHijo;
 
     hijoMenor = hijoMenor * 2 + 1;
     hijoMayor = hijoMayor * 2 + 2;
@@ -76,6 +76,18 @@ void heap_pop(Heap* pq)
 
 Heap* createHeap()
 {
+  
+  
+  Heap *clon = createHeap();
+  clon->size = pq->size;
+  clon->capac = pq->capac;
 
-   return NULL;
+  clon->heapArray = (heapElem*) malloc(sizeof(heapElem) * pq->capac);
+
+  for (int i = 0; i < pq->size; i++) 
+  {
+    clon->heapArray[i] = pq->heapArray[i];
+  }
+  
+  return NULL;
 }
