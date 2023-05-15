@@ -53,8 +53,8 @@ void heap_pop(Heap* pq)
   int hijoMenor = 1, hijoMayor = 2, pos = 0;
   heapElem auxiliar;
   
-    pq -> size--;
-  
+  pq -> size--;
+  pq -> heapArray[0] = pq -> heapArray[pq -> size];
   
   while (hijoMenor < pq -> size)
   {
@@ -62,7 +62,7 @@ void heap_pop(Heap* pq)
     
     if (hijoMenor < pq -> size && pq -> heapArray[hijoMayor].priority > pq -> heapArray[hijoMenor].priority) nodoHijo = hijoMayor;
     
-    if(pq -> heapArray[pos].priority >= pq -> heapArray[nodoHijo].priority) break;
+    
     
     auxiliar = pq -> heapArray[pos];
     pq -> heapArray[pos] = pq -> heapArray[nodoHijo];
